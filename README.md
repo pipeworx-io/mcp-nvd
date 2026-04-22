@@ -1,30 +1,54 @@
-# @pipeworx/mcp-nvd
+# mcp-nvd
 
-MCP server for CVE vulnerability data via the [NIST National Vulnerability Database API](https://nvd.nist.gov/developers). Free, no authentication required.
+NVD MCP — wraps the NIST National Vulnerability Database API (free, no auth)
+
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 250+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `search_cves` | Search CVE vulnerabilities by keyword (returns ID, description, severity, CVSS score) |
-| `get_cve` | Fetch a specific CVE by ID (e.g. "CVE-2021-44228") |
-| `recent_cves` | Fetch CVEs published within a date range |
 
-## Quickstart via Pipeworx Gateway
+## Quick Start
 
-```bash
-curl -X POST https://gateway.pipeworx.io/mcp \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "tools/call",
-    "params": {
-      "name": "nvd__get_cve",
-      "arguments": { "cve_id": "CVE-2021-44228" }
-    },
-    "id": 1
-  }'
+Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
+
+```json
+{
+  "mcpServers": {
+    "nvd": {
+      "url": "https://gateway.pipeworx.io/nvd/mcp"
+    }
+  }
+}
 ```
+
+Or connect to the full Pipeworx gateway for access to all 250+ data sources:
+
+```json
+{
+  "mcpServers": {
+    "pipeworx": {
+      "url": "https://gateway.pipeworx.io/mcp"
+    }
+  }
+}
+```
+
+## Using with ask_pipeworx
+
+Instead of calling tools directly, you can ask questions in plain English:
+
+```
+ask_pipeworx({ question: "your question about Nvd data" })
+```
+
+The gateway picks the right tool and fills the arguments automatically.
+
+## More
+
+- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [pipeworx.io](https://pipeworx.io)
 
 ## License
 
