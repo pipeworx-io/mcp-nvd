@@ -737,7 +737,7 @@ const tools: McpToolExport['tools'] = [
   {
     name: 'search_cves',
     description:
-      'Search NVD for CVE vulnerabilities by product or component name. Returns CVE ID, description, severity, and CVSS score. Search terms are matched against CVE description text and EVERY word must appear, so pass the product name ("OpenSSL", "log4j", "nginx") optionally with a technical term ("buffer overflow") — not a plain-English question. Use when researching security threats or checking if a known vulnerability affects your systems.',
+      'Search NVD for CVE vulnerabilities by product or component name. Returns CVE ID, description, severity, and CVSS score. Search terms are matched against CVE description text and EVERY word must appear, so pass the product name ("OpenSSL", "log4j", "nginx") optionally with a technical term ("buffer overflow") — not a plain-English question. Use when researching security threats or checking if a known vulnerability affects your systems. Use this when the question names a product or a vulnerability but no CVE ID; with an ID in hand, get_cve.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -753,7 +753,7 @@ const tools: McpToolExport['tools'] = [
   {
     name: 'get_cve',
     description:
-      'Get full details for a specific CVE (e.g., "CVE-2021-44228"). Returns description, severity, CVSS score, affected products, and remediation info. Use when you need comprehensive vulnerability analysis.',
+      'Get the full NVD (National Vulnerability Database) record for ONE CVE when you already have its ID (e.g., "CVE-2021-44228"). Returns description, severity, CVSS score, affected products, and remediation info.',
     inputSchema: {
       type: 'object',
       properties: {
