@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.pipeworx-io/nvd",
   "title": "Nvd",
-  "description": "NVD MCP — wraps the NIST National Vulnerability Database API.",
-  "version": "0.1.4",
+  "description": "NVD MCP — wraps the NIST National Vulnerability Database API.…",
+  "version": "0.1.5",
   "websiteUrl": "https://pipeworx.io/packs/nvd",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-nvd",

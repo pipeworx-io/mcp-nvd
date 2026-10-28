@@ -1,7 +1,7 @@
 {
   "name": "@pipeworx/mcp-nvd",
-  "version": "0.1.4",
-  "description": "NVD MCP — wraps the NIST National Vulnerability Database API.",
+  "version": "0.1.5",
+  "description": "NVD MCP — wraps the NIST National Vulnerability Database API. https://services.nvd.nist.gov/rest/json",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-bfc02e4383a824ff8dc4228a38d41b0b78cedea3f7ca812ed8294dccd55c3293",
-    "sourceCommit": "eaa02971997fbfee27712ea66d7d5fd840d008ea"
+    "sourceHash": "v1-8d496b93bec82765e61d1a1cfd861854eadee0f925c9ac599986ba3ef715c116",
+    "sourceCommit": "774de7f685a75e02d0b828d24a7b94794102152c"
   }
 }
